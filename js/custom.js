@@ -1,5 +1,7 @@
 jQuery(function ($) {
     $(document).ready(function () {
+        $(".sticky").parent().addClass("sticky");
+        $(".site-header").addClass("header-sticky");
         $(".header-carousel").owlCarousel({
             loop: false,
             margin: 11,
