@@ -22,8 +22,10 @@ function tambah_stylesheet() {
     wp_enqueue_style('owl-theme-css', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css');
 
     // Home CSS
-    wp_enqueue_style('bs-icon-css', get_stylesheet_directory_uri() . '/css/bootstrap-icons.css');
-    wp_enqueue_style('home-css', get_stylesheet_directory_uri() . '/css/home.css');
+    if(is_front_page(  )) {
+        wp_enqueue_style('bs-icon-css', get_stylesheet_directory_uri() . '/css/bootstrap-icons.css');
+        wp_enqueue_style('home-css', get_stylesheet_directory_uri() . '/css/home.css');
+    }
 
     // Script
     wp_enqueue_script('jq', get_theme_file_uri( 'js/jquery-3.7.1.min.js' ), [], '3.7.1', true);

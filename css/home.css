@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-.header-carousel .owl-dots button {
+.header-carousel .owl-dots button,
+.owl-category .owl-dots button {
     width: 12px;
     height: 12px;
     opacity: 1;
@@ -8,27 +9,128 @@
     background: #e6e9ed !important;
     padding: 0;
 }
-.header-carousel .owl-dots {
+.header-carousel .owl-dots,
+.owl-category .owl-dots {
     text-align: center;
     margin: 0 auto 20px;
     position: static;
     bottom: 20px;
     right: 20px;
 }
-.header-carousel .owl-dots button.active {
+.header-carousel .owl-dots button.active,
+.owl-category .owl-dots button.active {
     opacity: 0.95;
     width: 16px;
     background: none !important;
     border: 2px solid #3c8cac !important;
     height: 16px;
 }
-.header-carousel .owl-nav {
+.header-carousel .owl-nav,
+.owl-category .owl-nav {
     display: none;
 }
 .grid-container {
     max-width: 1024px !important;
 }
 a {
-    font-weight: normal;
     text-decoration: none !important;
+}
+.separate-containers .inside-article,
+.separate-containers .comments-area,
+.separate-containers .page-header,
+.one-container .container,
+.separate-containers .paging-navigation,
+.inside-page-header {
+    background-color: transparent !important;
+}
+.btn-rounded {
+    border: 1px solid #3c8cac;
+    font-size: 14px;
+    padding: 4px 17px;
+    border-radius: 50px;
+}
+.heading-category {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+.heading-category:after {
+    content: " ";
+    margin-left: 30px;
+    flex: 1 1 auto;
+    height: 2px;
+    background-color: #f1f1f1;
+    position: relative;
+    top: 10px;
+    margin-right: 30px;
+}
+body {
+    background-color: #fff !important;
+    font-family: Inter, sans-serif;
+}
+
+.owl-category .owl-item .bi-patch-check-fill {
+    color: #3c8cac;
+}
+
+.list-artikel-terbaru > .gb-grid-column {
+    position: relative;
+    padding-left: 50px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.list-artikel-terbaru > .gb-grid-column:last-child {
+    border-bottom: none;
+}
+.list-artikel-terbaru > .gb-grid-column:nth-child(1):after {
+    content: "#1";
+}
+.list-artikel-terbaru > .gb-grid-column:nth-child(2):after {
+    content: "#2";
+}
+.list-artikel-terbaru > .gb-grid-column:nth-child(3):after {
+    content: "#3";
+}
+.list-artikel-terbaru > .gb-grid-column:nth-child(4):after {
+    content: "#4";
+}
+.list-artikel-terbaru > .gb-grid-column:nth-child(5):after {
+    content: "#5";
+}
+.list-artikel-terbaru > .gb-grid-column::after {
+    display: flex;
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3c8cac;
+    color: #fff;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+.sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+}
+.hover-scale {
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }

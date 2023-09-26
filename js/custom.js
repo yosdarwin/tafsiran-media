@@ -19,5 +19,26 @@ jQuery(function ($) {
                 },
             },
         });
+        $(".owl-category").owlCarousel({
+            loop: false,
+            margin: 20,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {
+                    margin: 10,
+                    items: 2,
+                },
+                600: {
+                    items: 3,
+                    margin: 10,
+                },
+                1000: {
+                    items: 3,
+                },
+            },
+        });
     });
 });
